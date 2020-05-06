@@ -31,7 +31,7 @@ def task2_sub_data():
         isfloatValue=False
 
     if isfloatValue:
-       print(str(receiveTime) + ": " + msg.topic + " " + str(val))
+        print(str(receiveTime) + ": " + msg.topic + " " + str(val))
         #post={"topic":msg.topic,"value":val}
         post={"value":val}
     else:
