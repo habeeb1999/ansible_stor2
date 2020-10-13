@@ -39,7 +39,7 @@ def task2_sub_data():
         #post={"topic":msg.topic,"value":message}
         post={"value":message}
     mycol.insert_one(post)
-    client2.publish(topic="TestingTopic", payload=str(message), qos=0, retain=True)
+    client2.publish(topic="TestingTopic", payload=str(message), qos=0, retain=False)
     #client2.publish(topic="TestingTopic", payload=str(message))
     #client2.publish("TestingTopic",str(message))
   # Set up client for MongoDB
