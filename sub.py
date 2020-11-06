@@ -28,7 +28,7 @@ def on_message(client, userdata, msg):
         #post={"topic":msg.topic,"value":message}
         post={"value":message}
     mycol.insert_one(post)
-    client2.publish(topic="TestingTopic", payload=str(message), qos=0, retain=True)
+    client2.publish(topic="TestingTopic", payload=str(message), qos=0, retain=False)
     #client2.publish("TestingTopic", str(message))
 def delet_old_content():
     x = mycol.delete_many({})
