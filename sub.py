@@ -50,7 +50,7 @@ client2.connect(MQTT_BROKER_HOST, MQTT_BROKER_PORT, MQTT_KEEP_ALIVE_INTERVAL)
 
 
 client = mqtt.Client()
-client.connect("192.168.1.108", 1883, 60)
+client.connect("192.168.43.117", 1883, 60)
 client.on_connect = on_connect
 client.on_message = on_message
 # connect(host, port=1883, keepalive=60, bind_address="")
